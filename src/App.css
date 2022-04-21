@@ -1,0 +1,11 @@
+.product{
+  display: flex;
+  padding: 15%;
+}
+
+.product-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5%;
+}
