@@ -1,4 +1,4 @@
-const isObjectsEqual = (list1, list2) =>
+const objectsDifference = (list1, list2) =>
   list1.filter((obj) => {
     return !list2.some((obj2) => {
       return (
@@ -7,4 +7,4 @@ const isObjectsEqual = (list1, list2) =>
       );
     });
   });
-export default isObjectsEqual;
+export default objectsDifference;

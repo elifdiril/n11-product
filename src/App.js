@@ -22,8 +22,8 @@ function App() {
           <SelectableAttributes />
           <BaremList />
           <QuantityInput />
-          <BasketButton />
           <Total />
+          <BasketButton />
         </div>
       </div>
     </ProductProvider>

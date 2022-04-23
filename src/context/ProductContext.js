@@ -1,6 +1,6 @@
 import { createContext, useState, useContext, useEffect } from "react";
 import productData from "../assets/product-data.json";
-import isObjectsEqual from "../helpers/isObjectsEqual";
+import objectsDifference from "../helpers/objectsDifference";
 
 const ProductContext = createContext();
 
@@ -16,12 +16,12 @@ export const ProductProvider = ({ children }) => {
   const [quantity, setQuantity] = useState(0);
   const [total, setTotal] = useState(0);
 
-  useEffect(() => {
+  /*useEffect(() => {
     const minQuantityValue = baremList[0].minimumQuantity;
     if (quantity < minQuantityValue) {
       setQuantity(minQuantityValue);
     }
-  }, [quantity]);
+  }, [quantity]);*/
 
   useEffect(() => {
     const _products = [];
@@ -34,7 +34,7 @@ export const ProductProvider = ({ children }) => {
     } else {
       productData.productVariants.forEach((variants) => {
         if (
-          isObjectsEqual(selectedAttributes, variants.attributes).length === 0
+          objectsDifference(selectedAttributes, variants.attributes).length === 0
         ) {
           _products.push(variants);
         }

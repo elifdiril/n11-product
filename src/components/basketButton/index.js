@@ -1,10 +1,19 @@
-
+import { useProduct } from "../../context/ProductContext";
 function BasketButton() {
-    return (
-        <button>
-            SEPETE EKLE
-        </button>
-    );
+  const { products, total, quantity } = useProduct();
+
+  const onClickHandle = () => {
+    console.log(products, total);
+  };
+
+  return (
+    <button
+      disabled={products.length === 1 && quantity > 0 ? false : true}
+      onClick={onClickHandle}
+    >
+      SEPETE EKLE
+    </button>
+  );
 }
 
 export default BasketButton;
