@@ -1,10 +1,10 @@
-import styles from"./styles.module.css";
-function Title({title}) {
-    return (
-        <div className={styles.title}>
-            {title}
-        </div>
-    );
+import styles from "./styles.module.css";
+import { useProduct } from "../../context/ProductContext";
+
+function Title() {
+  const { productTitle } = useProduct();
+  
+  return <div className={styles.title}>{productTitle}</div>;
 }
 
-export default Title;  
+export default Title;

@@ -1,12 +1,22 @@
-import React from 'react';
-import BaremListItem from '../baremListItem';
+import React from "react";
+import BaremListItem from "../baremListItem";
+import { useProduct } from "../../context/ProductContext";
 
-function BaremList({list}) {
-    return (
-        <div>
-            Toptan Fiyat (Adet): {list.map((item, id) => <BaremListItem key={id} minQuantity={item.minimumQuantity} maxQuantity={item.maximumQuantity} price={item.price}/> )}
-        </div>
-    );
+function BaremList() {
+  const { baremList } = useProduct();
+  return (
+    <div>
+      Toptan Fiyat (Adet):{" "}
+      {baremList.map((item, id) => (
+        <BaremListItem
+          key={id}
+          minQuantity={item.minimumQuantity}
+          maxQuantity={item.maximumQuantity}
+          price={item.price}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default BaremList;

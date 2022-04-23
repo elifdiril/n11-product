@@ -1,10 +1,19 @@
 import SelectableAttributeBox from "../selectableAttributeBox";
 import styles from "./styles.module.css";
+import { useProduct } from "../../context/ProductContext";
 
-function SelectableAttributes({ item }) {
+function SelectableAttributes() {
+  const { productData, setSelectedAttributes } = useProduct();
   return (
-    <div>
-      {item.name}: {item?.values?.map((val, id) => <SelectableAttributeBox key={id} value={val}/>)}
+    <div className={styles.selectableAttribute}>
+      {productData?.selectableAttributes.map((item, i) => (
+        <div key={i} className={styles.row}>
+          {item.name}:{" "}
+          {item?.values?.map((val, id) => (
+            <SelectableAttributeBox attributeId={i} key={id} value={val} item={item}/>
+          ))}
+        </div>
+      ))}
     </div>
   );
 }

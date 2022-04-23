@@ -1,6 +1,6 @@
 import styles from"./styles.module.css";
 
-function Stars(props) {
+function Stars() {
     return (
         <div>
       {[...Array(4)].map((star, id) => {        

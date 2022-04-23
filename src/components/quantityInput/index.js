@@ -1,9 +1,11 @@
-import React from 'react';
+import styles from "./styles.module.css";
 
 function QuantityInput() {
-    return (
-        <input type='text'/>
-    );
+  return (
+    <div className={styles.input}>
+      Adet: <input type="text" /> Adet
+    </div>
+  );
 }
 
 export default QuantityInput;
