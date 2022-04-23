@@ -1,4 +1,6 @@
 import { useProduct } from "../../context/ProductContext";
+import styles from "./styles.module.css";
+
 function BasketButton() {
   const { products, total, quantity } = useProduct();
 
@@ -10,6 +12,7 @@ function BasketButton() {
     <button
       disabled={products.length === 1 && quantity > 0 ? false : true}
       onClick={onClickHandle}
+      className={styles.buttonBasket}
     >
       SEPETE EKLE
     </button>

@@ -1,0 +1,13 @@
+.buttonBasket{
+    margin-top: 25px;
+    background-color: rgb(255, 197, 6);
+    color: white;
+    height: 30px;
+}
+
+.buttonBasket:disabled{
+    margin-top: 25px;
+    background-color: rgb(68, 68, 68);
+    color: white;
+    height: 30px;
+}

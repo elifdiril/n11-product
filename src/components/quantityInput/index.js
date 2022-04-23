@@ -11,13 +11,8 @@ function QuantityInput() {
   };
 
   return (
-    <div className={styles.input}>
-      Adet:{" "}
-      <input
-        type="number"
-        onChange={onChangeHandle}
-        min={120}
-      />{" "}
+    <div className={styles.inputDiv}>
+      Adet: <input className={styles.input} type="number" onChange={onChangeHandle} min={120} />
       Adet
     </div>
   );

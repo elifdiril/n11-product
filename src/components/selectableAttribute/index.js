@@ -4,6 +4,7 @@ import { useProduct } from "../../context/ProductContext";
 
 function SelectableAttributes() {
   const { productData } = useProduct();
+
   return (
     <div className={styles.selectableAttribute}>
       {productData?.selectableAttributes.map((item, i) => (

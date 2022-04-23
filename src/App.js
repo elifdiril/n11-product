@@ -8,25 +8,32 @@ import "./App.css";
 import { ProductProvider } from "./context/ProductContext";
 import Photos from "./components/photos";
 import Total from "./components/total";
+import n11Logo from "./assets/n11.svg";
 
 function App() {
   return (
-    <ProductProvider>
-      <div className="product">
-        <div className="photos">
-          <Photos />
+    <div>
+      {" "}
+      <img src={n11Logo} alt="n11 Logo" />
+      <ProductProvider>
+        <div className="product">
+          <div className="photos">
+            <Photos />
+          </div>
+          <div className="product-details">
+            <Title />
+            <Stars />
+            <SelectableAttributes />
+            <div className="barem">
+              <BaremList />
+              <QuantityInput />
+            </div>
+            <Total />
+            <BasketButton />
+          </div>
         </div>
-        <div className="product-details">
-          <Title />
-          <Stars />
-          <SelectableAttributes />
-          <BaremList />
-          <QuantityInput />
-          <Total />
-          <BasketButton />
-        </div>
-      </div>
-    </ProductProvider>
+      </ProductProvider>
+    </div>
   );
 }
 

@@ -1,4 +1,9 @@
-.input{
+.inputDiv{
     color:rgba(26, 25, 25, 0.973);
-    width: 35px;
+    width: 15px;
+    display: flex;
+}
+
+.input{
+    width: 55px;
 }
