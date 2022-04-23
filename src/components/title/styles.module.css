@@ -1,4 +1,15 @@
-title{
-    font-weight: 300;
-    font-size: larger;
+.title {
+    font-size: 18px;
+    line-height: 1.44;
+    max-height: 52px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    letter-spacing: 0.72px;
+    color: #313335;
+    word-break: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
 }

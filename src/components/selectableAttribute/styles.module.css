@@ -1,7 +1,14 @@
-.selectableAttribute{
+.selectableAttribute {
     width: 35%;
 }
 
-.row{
+.row {
     display: flex;
+    align-items: center;
+}
+
+.name {
+    padding-right: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
 }

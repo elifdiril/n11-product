@@ -8,7 +8,7 @@ function SelectableAttributes() {
     <div className={styles.selectableAttribute}>
       {productData?.selectableAttributes.map((item, i) => (
         <div key={i} className={styles.row}>
-          {item.name}:{" "}
+          <span className={styles.name}>{item.name}: </span>{" "}
           {item?.values?.map((val, id) => (
             <SelectableAttributeBox attributeId={i} key={id} value={val} item={item}/>
           ))}

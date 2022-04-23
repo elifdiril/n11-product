@@ -7,7 +7,7 @@ const ProductContext = createContext();
 export const ProductProvider = ({ children }) => {
   const [selectedAttributes, setSelectedAttributes] = useState([]);
   const [photos, setPhotos] = useState();
-  const [selectedPhoto, setSelectedPhoto] = useState();
+  const [selectedPhoto, setSelectedPhoto] = useState(productData.productVariants[0].images[0]);
   const productTitle = productData.productTitle;
   const baremList = productData.baremList;
   const [products, setProducts] = useState(productData.productVariants);
@@ -30,7 +30,7 @@ export const ProductProvider = ({ children }) => {
       });
       setProducts(_products);
       setPhotos([...new Set(_products.flatMap((item) => item.images))]);
-      console.log(_products)
+      setSelectedPhoto([...new Set(_products.flatMap((item) => item.images))][0])
     }
   }, [selectedAttributes]);
 

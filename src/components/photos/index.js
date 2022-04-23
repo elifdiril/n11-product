@@ -2,11 +2,17 @@ import styles from "./styles.module.css";
 import { useProduct } from "../../context/ProductContext";
 
 function Photos() {
-  const { selectedPhoto, setSelectedPhoto } = useProduct();
-  return <div className={styles.pContainer}>
+  const { photos, selectedPhoto, setSelectedPhoto } = useProduct();
 
-<img src="../logo512.png"/>
-  </div>;
+  return (
+    <div className={styles.pContainer}>
+      <img src={selectedPhoto} className={styles.pBig} />
+      <div className={styles.smallPContainer}>
+      {photos && photos.map((photo, id) => (
+       <li key={id} onClick={() => setSelectedPhoto(photo)}> <img key={id} src={photo} className={styles.pSmall} /></li>
+      ))}</div>
+    </div>
+  );
 }
 
 export default Photos;

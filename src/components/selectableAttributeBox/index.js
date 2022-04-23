@@ -1,4 +1,4 @@
-import "./aBox.css";
+import "./attrBox.css";
 import { useProduct } from "../../context/ProductContext";
 
 function SelectableAttributeBox({ value, item }) {
@@ -25,14 +25,15 @@ function SelectableAttributeBox({ value, item }) {
 
   return (
     <div>
+      <label className="label">
       <input
         type="radio"
         name={item.name}
         value={value}
-        className="box false"
+        className={"radioInput selected"}
         onChange={onChangeHandle}
       />
-      <label>{value}</label>
+      {value}</label>
     </div>
   );
 }
