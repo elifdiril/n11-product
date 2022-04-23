@@ -8,7 +8,6 @@
     height: 20px;
     border: 1px solid #d7d9da;
     font-size: 13px;
-    vertical-align: top;
     cursor: pointer;
     text-align: center;
     overflow: hidden;
@@ -16,20 +15,6 @@
     text-overflow: ellipsis;
 }
 
-.radioInput {
-    background-color: initial;
-    cursor: default;
-    appearance: auto;
-    box-sizing: border-box;
-    margin: 3px 3px 0px 5px;
-    padding: initial;
-    border: initial;
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: #fff;
-    border:none !important;
-}
-.selected {
-    border: 2px solid #313335;
-    font-weight: 600;
+.radioInput label:hover {
+    background-color: #878b88;
 }

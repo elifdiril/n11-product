@@ -7,13 +7,14 @@ import QuantityInput from "./components/quantityInput";
 import "./App.css";
 import { ProductProvider } from "./context/ProductContext";
 import Photos from "./components/photos";
+import Total from "./components/total";
 
 function App() {
   return (
     <ProductProvider>
       <div className="product">
         <div className="photos">
-          <Photos/>
+          <Photos />
         </div>
         <div className="product-details">
           <Title />
@@ -22,6 +23,7 @@ function App() {
           <BaremList />
           <QuantityInput />
           <BasketButton />
+          <Total />
         </div>
       </div>
     </ProductProvider>

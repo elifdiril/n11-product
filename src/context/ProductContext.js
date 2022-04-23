@@ -7,10 +7,21 @@ const ProductContext = createContext();
 export const ProductProvider = ({ children }) => {
   const [selectedAttributes, setSelectedAttributes] = useState([]);
   const [photos, setPhotos] = useState();
-  const [selectedPhoto, setSelectedPhoto] = useState(productData.productVariants[0].images[0]);
+  const [selectedPhoto, setSelectedPhoto] = useState(
+    productData.productVariants[0].images[0]
+  );
   const productTitle = productData.productTitle;
   const baremList = productData.baremList;
   const [products, setProducts] = useState(productData.productVariants);
+  const [quantity, setQuantity] = useState(0);
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    const minQuantityValue = baremList[0].minimumQuantity;
+    if (quantity < minQuantityValue) {
+      setQuantity(minQuantityValue);
+    }
+  }, [quantity]);
 
   useEffect(() => {
     const _products = [];
@@ -30,7 +41,9 @@ export const ProductProvider = ({ children }) => {
       });
       setProducts(_products);
       setPhotos([...new Set(_products.flatMap((item) => item.images))]);
-      setSelectedPhoto([...new Set(_products.flatMap((item) => item.images))][0])
+      setSelectedPhoto(
+        [...new Set(_products.flatMap((item) => item.images))][0]
+      );
     }
   }, [selectedAttributes]);
 
@@ -46,6 +59,10 @@ export const ProductProvider = ({ children }) => {
     baremList,
     selectedPhoto,
     setSelectedPhoto,
+    quantity,
+    setQuantity,
+    total,
+    setTotal,
   };
 
   return (
