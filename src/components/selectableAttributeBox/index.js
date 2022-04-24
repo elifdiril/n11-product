@@ -7,12 +7,15 @@ function SelectableAttributeBox({ value, item }) {
   const [isDisabled, setIsDisabled] = useState(false);
 
   useEffect(() => {
+    //do not set disabled if it is the first or last element of the selectedAttributes array
     setIsDisabled(
       !products.some((product) =>
         product.attributes.some(
           (attr) => attr.name === item.name && attr.value === value
         )
-      ) && selectedAttributes[0].name !== item.name
+      ) &&
+        selectedAttributes[0].name !== item.name &&
+        selectedAttributes[selectedAttributes.length - 1].name !== item.name
     );
   }, [products]);
 
