@@ -1,6 +1,7 @@
 .pBig {
     height: 300px;
     width: 300px;
+    border: 1px solid rgb(199, 199, 199);
 }
 
 .pSmall {
