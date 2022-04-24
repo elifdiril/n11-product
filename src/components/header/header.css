@@ -1,0 +1,23 @@
+.header-div {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2px;
+    align-items: center;
+    background-color: rgb(233, 232, 232);
+}
+
+.header-div input {
+    box-shadow: none;
+    background-color: #f2f3f3;
+    width: 50%;
+    border-radius: 8px;
+    font-size: 15px;
+    height: 48px;
+    padding-left: 24px;
+    letter-spacing: 0.6px;
+    color: #62666a;
+}
+
+.icons a img {
+    padding-right: 20px;
+}

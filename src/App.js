@@ -8,13 +8,12 @@ import "./App.css";
 import { ProductProvider } from "./context/ProductContext";
 import Photos from "./components/photos";
 import Total from "./components/total";
-import n11Logo from "./assets/n11.svg";
+import Header from "./components/header";
 
 function App() {
   return (
     <>
-      {" "}
-      <img src={n11Logo} alt="n11 Logo" />
+      <Header />
       <ProductProvider>
         <div className="product">
           <div className="photos">
