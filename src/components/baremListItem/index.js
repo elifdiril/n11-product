@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useProduct } from "../../context/ProductContext";
 import fixRounding from "../../helpers/fixRounding";
-import styles from "./styles.module.css";
+import "./baremItem.css";
 
 function BaremListItem({ minQuantity, maxQuantity, price, isChecked }) {
   const { quantity, setTotal } = useProduct();
@@ -13,15 +13,16 @@ function BaremListItem({ minQuantity, maxQuantity, price, isChecked }) {
   }, [quantity]);
 
   return (
-    <div className={styles.baremItemDiv}>
-      <label className="label">
-        <input
-          type="radio"
-          name={minQuantity}
-          value={minQuantity}
-          disabled={true}
-          checked={isChecked}
-        />
+    <div className="baremItemDiv">
+      <input
+        type="radio"
+        id={minQuantity}
+        name={minQuantity}
+        value={minQuantity}
+        disabled={true}
+        checked={isChecked}
+      />
+      <label className="label" htmlFor={minQuantity}>
         {minQuantity} - {maxQuantity > 2000 ? "2000+" : maxQuantity} {price} TL
       </label>
     </div>

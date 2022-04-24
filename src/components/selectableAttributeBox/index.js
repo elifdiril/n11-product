@@ -17,7 +17,6 @@ function SelectableAttributeBox({ value, item }) {
   }, [products]);
 
   const onChangeHandle = (e) => {
-
     if (selectedAttributes.length < 1) {
       setSelectedAttributes((prev) => [
         ...prev,
@@ -45,14 +44,15 @@ function SelectableAttributeBox({ value, item }) {
 
   return (
     <div>
-      <label className="label">
-        <input
-          type="radio"
-          name={item.name}
-          value={value}
-          onChange={onChangeHandle}
-          disabled={isDisabled}
-        />
+      <input
+        type="radio"
+        name={item.name}
+        id={`${value}${item.name}`}
+        value={value}
+        onChange={onChangeHandle}
+        disabled={isDisabled}
+      />
+      <label className="label" htmlFor={`${value}${item.name}`}>
         {value}
       </label>
     </div>

@@ -1,0 +1,23 @@
+.baremItemDiv{
+    display: flex;
+}
+
+.baremItemDiv input[type="radio"] {
+    display: none;
+}
+
+.baremItemDiv input[type="radio"]:disabled + label {
+    background: white;
+    display: inline-block;
+    position: relative;
+    pointer-events: none;
+    color: #6e6e6e;
+}
+
+.baremItemDiv input[type="radio"]:checked + label {
+    font-weight: bold;
+    border: 1px solid #000000;
+    background: rgb(255, 227, 196);
+    color: #313131;
+}
+
