@@ -1,6 +1,6 @@
 .product {
   display: flex;
-  padding: 7%;
+  padding: 5%;
 }
 
 .product-details {
@@ -12,7 +12,6 @@
 
 .barem {
   background-color: rgb(233, 232, 232);
-  width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   display: flex;

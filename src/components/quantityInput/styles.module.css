@@ -1,9 +1,13 @@
-.inputDiv{
-    color:rgba(26, 25, 25, 0.973);
-    width: 15px;
+.inputDiv {
+    color: rgba(26, 25, 25, 0.973);
     display: flex;
 }
 
-.input{
+.input {
     width: 55px;
+}
+
+.inputSpan {
+    display: inline-block;
+    margin-left: 55px;
 }

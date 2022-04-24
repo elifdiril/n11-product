@@ -12,7 +12,7 @@ import n11Logo from "./assets/n11.svg";
 
 function App() {
   return (
-    <div>
+    <>
       {" "}
       <img src={n11Logo} alt="n11 Logo" />
       <ProductProvider>
@@ -33,7 +33,7 @@ function App() {
           </div>
         </div>
       </ProductProvider>
-    </div>
+    </>
   );
 }
 

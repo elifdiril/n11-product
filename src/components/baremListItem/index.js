@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useProduct } from "../../context/ProductContext";
 import fixRounding from "../../helpers/fixRounding";
+import styles from "./styles.module.css";
 
 function BaremListItem({ minQuantity, maxQuantity, price, isChecked }) {
   const { quantity, setTotal } = useProduct();
@@ -12,7 +13,7 @@ function BaremListItem({ minQuantity, maxQuantity, price, isChecked }) {
   }, [quantity]);
 
   return (
-    <div>
+    <div className={styles.baremItemDiv}>
       <label className="label">
         <input
           type="radio"

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import BaremListItem from "../baremListItem";
 import { useProduct } from "../../context/ProductContext";
+import styles from "./styles.module.css";
 
 function BaremList() {
   const { baremList, quantity } = useProduct();
   return (
-    <div>
+    <div className={styles.baremListDiv}>
       Toptan Fiyat (Adet):{" "}
       {baremList.map((item, id) => {
         let isChecked = false;
