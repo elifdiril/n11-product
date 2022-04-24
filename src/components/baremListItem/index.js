@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 import { useProduct } from "../../context/ProductContext";
+import fixRounding from "../../helpers/fixRounding";
 
 function BaremListItem({ minQuantity, maxQuantity, price, isChecked }) {
   const { quantity, setTotal } = useProduct();
 
   useEffect(() => {
-    setTotal(quantity * price);
+    if (isChecked) {
+      setTotal(fixRounding(quantity, price));
+    }
   }, [quantity]);
 
   return (
@@ -18,7 +21,7 @@ function BaremListItem({ minQuantity, maxQuantity, price, isChecked }) {
           disabled={true}
           checked={isChecked}
         />
-        {minQuantity} - {maxQuantity} {price} TL
+        {minQuantity} - {maxQuantity > 2000 ? "2000+" : maxQuantity} {price} TL
       </label>
     </div>
   );

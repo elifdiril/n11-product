@@ -16,9 +16,6 @@ function BaremList() {
           isChecked = true;
         }
 
-        if(item.maximumQuantity > 2000){
-          item.maximumQuantity = "2000 +"
-        }
         return (
           <BaremListItem
             key={id}
