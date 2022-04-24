@@ -59,7 +59,6 @@ export const ProductProvider = ({ children }) => {
     setQuantity,
     total,
     setTotal,
-    lastChoices,
     setLastChoices,
   };
 

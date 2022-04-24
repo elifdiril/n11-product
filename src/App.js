@@ -19,15 +19,17 @@ function App() {
           <div className="photos">
             <Photos />
           </div>
-          <div className="product-details">
-            <Title />
-            <Stars />
-            <SelectableAttributes />
-            <div className="barem">
-              <BaremList />
-              <QuantityInput />
+          <div className="detail-button">
+            <div className="product-details">
+              <Title />
+              <Stars />
+              <SelectableAttributes />
+              <div className="barem">
+                <BaremList />
+                <QuantityInput />
+              </div>
+              <Total />
             </div>
-            <Total />
             <BasketButton />
           </div>
         </div>

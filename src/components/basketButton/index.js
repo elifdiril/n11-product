@@ -5,7 +5,7 @@ function BasketButton() {
   const { products, total, quantity } = useProduct();
 
   const onClickHandle = () => {
-    console.log("product:",products, "total:",total);
+    console.log("product:", products, "total:", total);
   };
 
   return (

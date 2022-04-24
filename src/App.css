@@ -18,7 +18,7 @@
   flex-direction: column;
 }
 
-.span{
+.span {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,6 +26,12 @@
   position: relative;
 }
 
-img{
+img {
   padding: 5px;
+}
+
+.detail-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }

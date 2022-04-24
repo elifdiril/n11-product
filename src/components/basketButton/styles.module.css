@@ -1,6 +1,7 @@
 .buttonBasket{
     margin-top: 25px;
-    background-color: rgb(255, 197, 6);
+    background-color: #1d1f20;
+    border: 2px solid #202020;
     color: white;
     height: 30px;
 }
