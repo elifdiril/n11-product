@@ -1,5 +1,5 @@
 # n11 product details project
-Movie and series search project with OMDb api
+n11 detail page
 
 ## [Live on Netlify](https://n11-product-details.netlify.app/)
 
